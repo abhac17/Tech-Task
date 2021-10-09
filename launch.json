@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+       
+      {
+        "name": "Launch file",
+        "type": "go",
+        "request": "launch",
+        "mode": "auto",
+        "program": "${file}",
+        "env": {
+          "PATH": "/usr/local/go/bin:${fileDirname}",
+        "args": [],
+     
+        "settings": {
+            "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+            "go.autocompleteUnimportedPackages": true, 
+            "go.gocodePackageLookupMode": "go",
+            "go.gotoSymbol.includeImports": true,
+            "go.useCodeSnippetsOnFunctionSuggest": true,
+            "explorer.confirmDelete": false,
+            "go.formatTool": "goimports",
+            "go.docsTool": "gogetdoc",
+            "go.buildFlags": [],
+            "explorer.confirmDragAndDrop": false,
+            "window.zoomLevel": 0.8,
+            "editor.minimap.enabled": false,
+            "go.useLanguageServer": true,
+            "go.delveConfig":{
+                "debugAdapter":"dlv-dap"
+                },
+            "[go]": {
+                "editor.snippetSuggestions": "none",
+                "editor.formatOnType": true,
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": true
+                }
+            },
+            "gopls": {
+                "experimentalWorkspaceModule": true,
+                "usePlaceholders": true, // add parameter placeholders when completing a function
+                "completionDocumentation": true // for documentation in completion items
+            }
+        },
+            
+        }
+    },
+    ]
+  }
